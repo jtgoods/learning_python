@@ -14,3 +14,14 @@ My journey through Maestro coursework, learning python and beyond
 - how to format printed information, including f-strings
 
 **Code examples:** see 'week-1/' folder
+
+### Week 2: Decisions and loops
+### Topics covered
+-
+- 
+
+### Key learnings
+-
+- 
+
+**Code examples:** see 'week-2/' folder
