@@ -13,7 +13,7 @@ My journey through Maestro coursework, learning python and beyond
 - how to define and call functions, including saving data for later use
 - how to format printed information, including f-strings
 
-**Code examples:** see 'week-1/' folder
+**Code examples:** see 'week_1/' folder
 
 ### Week 2: Decisions and loops
 ### Topics covered
@@ -24,4 +24,4 @@ My journey through Maestro coursework, learning python and beyond
 -
 - 
 
-**Code examples:** see 'week-2/' folder
+**Code examples:** see 'week_2/' folder
