@@ -12,6 +12,7 @@ My journey through Maestro coursework, learning python and beyond
 - how to take user input, use it in a function, and print
 - how to define and call functions, including saving data for later use
 - how to format printed information, including f-strings
+- how to do math
 
 **Code examples:** see 'week_1/' folder
 
@@ -19,11 +20,11 @@ My journey through Maestro coursework, learning python and beyond
 ### Topics covered
 - if/elif/else 
 - and/or/not and short circuiting
-- loops
+- loops (for, while)
 
 ### Key learnings
-- decision tables/trees
-- 
-- 
+- how to write decision tables/trees
+- how to do loop control
+- how to break problems into steps
 
 **Code examples:** see 'week_2/' folder
