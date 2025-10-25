@@ -17,11 +17,13 @@ My journey through Maestro coursework, learning python and beyond
 
 ### Week 2: Decisions and loops
 ### Topics covered
--
-- 
+- if/elif/else 
+- and/or/not and short circuiting
+- loops
 
 ### Key learnings
--
+- decision tables/trees
+- 
 - 
 
 **Code examples:** see 'week_2/' folder
