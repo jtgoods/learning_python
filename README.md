@@ -28,3 +28,14 @@ My journey through Maestro coursework, learning python and beyond
 - how to break problems into steps
 
 **Code examples:** see 'week_2/' folder
+
+### Week 3: Basic data structures
+### Topics covered
+- editing strings
+- 
+
+### Key learnings
+- 
+- 
+
+**Code examples:** see 'week_3/' folder
