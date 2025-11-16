@@ -1,0 +1,156 @@
+"""
+This week's assignment instructions:
+Refactor Grandma’s cookie recipe code below into clean, well-structured functions.
+Use clear, meaningful names for all variables and functions.
+Add descriptive docstrings and purposeful comments for each function and major step.
+Handle invalid user input gracefully (such as zero, negative, or non-numeric servings).
+Apply consistent and readable formatting throughout.
+Write automated tests—cover normal, edge, and invalid input cases.
+"""
+# Grandma's Cookie Recipe - super messy version (no try/except)
+
+print("Welcome to Grandma's Cookie Recipe!")
+servings = input("Enter the number of servings: ")
+
+if servings == "":
+    print("You didn't type anything!")
+    quit()
+
+if servings.isnumeric():
+    servings = float(servings)
+else:
+    print("That's not a number! Please restart and enter a number next time.")
+    quit()
+
+if servings <= 0:
+    print("You can't bake zero or negative servings! That's silly.")
+    quit()
+
+# Original recipe quantities (for 4 servings)
+flour = 2
+sugar = 1
+butter = 0.5
+eggs = 1
+
+# Scale factor
+scale = servings / 4
+
+# New amounts
+flour_new = flour * scale
+sugar_new = sugar * scale
+butter_new = butter * scale
+eggs_new = eggs * scale
+
+print("Original recipe (for 4 servings):")
+print("-", flour, "cups flour")
+print("-", sugar, "cup sugar")
+print("-", butter, "cup butter")
+print("-", eggs, "egg")
+
+print("")
+print("Scaled recipe (for", servings, "servings):")
+print("-", flour_new, "cups flour")
+print("-", sugar_new, "cups sugar")
+print("-", butter_new, "cups butter")
+print("-", eggs_new, "eggs")
+
+print("")
+print("Now mix all the ingredients, bake at 350°F for 15 minutes, and don't forget to share with Grandma!")
+
+# My submission, below
+
+# Grandma's Cookie Recipe
+
+print("Welcome to Grandma's Cookie Recipe!")
+
+# Original recipe quantities (for 4 servings)
+flour = 2
+sugar = 1
+butter = 0.5
+eggs = 1
+
+def get_servings(): 
+    """
+    This function takes user input, and checks for invalid input
+
+    get_servings takes user input and returns the input as a float if it passes the checks (is a positive number).
+    """
+    servings = input("Enter the number of servings: ")
+    #handles edge cases and invalid inputs
+    if servings == "":
+        print("You didn't type anything!")
+        quit()
+    try:
+        value = float(servings)
+    except ValueError:
+        print("That’s not a number! Please restart and enter a number next time.")
+        quit()
+    if value <= 0:
+        print("You can't bake zero or negative servings! That's silly.")
+        quit()
+    return value
+
+# function for scale factor
+def scale_ingredients(servings):
+    """
+    scale_ingredients converts ingredient amounts.
+
+    This function takes user generated servings as input and converts to new amounts, returning these amounts as a dictionary.
+    """
+    scale = servings / 4
+    # New amounts
+    flour_new = flour * scale
+    sugar_new = sugar * scale
+    butter_new = butter * scale
+    eggs_new = eggs * scale
+    new_amounts = {
+    "flour": flour_new,
+    "sugar": sugar_new,
+    "butter": butter_new,
+    "eggs": eggs_new
+}
+    return new_amounts
+
+servings = get_servings()
+scaled = scale_ingredients(servings)
+
+# prints unscaled recipe
+print("Original recipe (for 4 servings):")
+print("-", flour, "cups flour")
+print("-", sugar, "cup sugar")
+print("-", butter, "cup butter")
+print("-", eggs, "egg")
+
+# prints scaled recipe / bake instructions
+print("")
+print("Scaled recipe (for", servings, "servings):")
+print(f"- {scaled['flour']: .2f} cups flour")
+print(f"- {scaled['sugar']: .2f} cups sugar")
+print(f"- {scaled['butter']: .2f} cups butter")
+print(f"- {scaled['eggs']: .2f} eggs")
+
+print("")
+print("Now mix all the ingredients, bake at 350°F for 15 minutes, and don't forget to share with Grandma!")
+
+#testing, testing...
+def get_servings_test(input_value):
+    """
+    Same as get_servings, but takes input as an argument for testing.
+    """
+    if input_value == "":
+        return "You didn't type anything!"
+    try:
+        value = float(input_value)
+    except ValueError:
+        return "That’s not a number!"
+    if value <= 0:
+        return "You can't bake zero or negative servings! That's silly."
+    return value
+
+assert get_servings_test("4") == 4.0
+assert get_servings_test("2.5") == 2.5
+assert get_servings_test("") == "You didn't type anything!"
+assert get_servings_test("abc") == "That’s not a number!"
+assert get_servings_test("-2") == "You can't bake zero or negative servings! That's silly."
+assert get_servings_test("0") == "You can't bake zero or negative servings! That's silly."
+
