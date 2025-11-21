@@ -16,7 +16,7 @@ My journey through Maestro coursework, learning python and beyond
 
 **Code examples:** see 'week_1/' folder
 
-### Week 2: Decisions and loops
+### Week 2: Decisions and Loops
 ### Topics covered
 - if/elif/else 
 - and/or/not and short circuiting
@@ -29,13 +29,41 @@ My journey through Maestro coursework, learning python and beyond
 
 **Code examples:** see 'week_2/' folder
 
-### Week 3: Basic data structures
+### Week 3: Basic Data Structures
 ### Topics covered
 - editing strings
+- making lists
+- using dictionaries
+
+### Key learnings
+- working with lists and dictionaries to keep data clean
+- creating and using functions to better organize code
+- computing summary statistics
+- validating input to keep data clean
+
+**Code examples:** see 'week_3/' folder
+
+### Week 4: Professional Coding Practices
+### Topics covered
+- proper formatting
+- docstrings and comments
+- using meaningful names for variables and functions
+
+### Key learnings
+- functional decomposition (breaking code into functions)
+- refactoring code
+- labeling and writing code for legibility
+
+**Code examples:** see 'week_4/' folder
+
+### Week 5: From Ideas to Instructions
+### Topics covered
+- pseudocode
+- flowcharts
 - 
 
 ### Key learnings
 - 
 - 
 
-**Code examples:** see 'week_3/' folder
+**Code examples:** see 'week_5/' folder
